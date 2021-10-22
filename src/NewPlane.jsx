@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 export function NewPlane({ addPlane }) {
   const [from_town, setFrom_town] = useState("");
@@ -39,18 +39,21 @@ export function NewPlane({ addPlane }) {
   return (
     <div className="form-container">
       <form className="forma">
+          <label>From what city:</label>
         <input
           type="text"
-          placeholder="from_town"
+          placeholder="enter city"
           value={from_town}
           onChange={(e) => control(e, "from_town")}
         />
+        <label>Which airline: </label>
         <input
           type="text"
-          placeholder="airline"
+          placeholder="enter airline"
           value={airline}
           onChange={(e) => control(e, "airline")}
         />
+        <label>Arrival date:</label>
         <input
           type="date"
           value={arrival_time}

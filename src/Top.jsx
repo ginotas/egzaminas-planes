@@ -3,7 +3,7 @@ export function Top({sort, sortDate, totalPlane}) {
       <div className="container">
         <div className="row">
           <div className="col">
-            <h1>AIRPORT</h1>
+            <h1>AIRPORT of Vilnius</h1>
           </div>
         </div>
         <div className="row">
@@ -15,8 +15,8 @@ export function Top({sort, sortDate, totalPlane}) {
             </div>
          
           <div className="col sortas">
-          <h3>Total plane count:</h3>
-           <h4>How many planes we have: {totalPlane}</h4>
+          <h3>Total incoming plane count:</h3>
+           <h4>There is {totalPlane} plane planned for arrival</h4>
             </div>
         </div>
       </div>

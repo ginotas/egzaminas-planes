@@ -53,18 +53,21 @@ export function Modal({ plane, id, hideModal, editplane }) {
   return (
     <div className="modalas">
       <form className="forma">
+      <label>From what city:</label>
         <input
           type="text"
-          placeholder="from_town"
+          placeholder="enter city"
           value={from_town}
           onChange={(e) => control(e, "from_town")}
         />
+        <label>Which airline: </label>
         <input
           type="text"
-          placeholder="airline"
+          placeholder="enter airline"
           value={airline}
           onChange={(e) => control(e, "airline")}
         />
+        <label>Arrival date:</label>
         <input
           type="date"
           value={arrival_time}

@@ -1,6 +1,6 @@
 import Plane from "./Plane";
 
-export function Planes({ planes, deletePlane, showModal }) {
+export function Planes({ planes, deletePlane, showModal, editPlane }) {
   return (
     <div className="lentele">
       <table className="table">
@@ -30,7 +30,7 @@ export function Planes({ planes, deletePlane, showModal }) {
           </tr>
         </thead>
         {planes.map((plane) => (
-          <Plane key={plane.id} plane={plane} deletePlane={deletePlane} showModal= {showModal} />
+          <Plane key={plane.id} plane={plane} deletePlane={deletePlane} editPlane={editPlane} showModal= {showModal} />
         ))}
       </table>
     </div>

@@ -44,7 +44,6 @@ function App() {
 
   useEffect(() => {
     axios.get("http://localhost:3003/planes/count").then((response) => {
-      console.log(response.data);
       setTotalPlane(response.data[0].totalPlane);
     });
   }, [lastUpdate]);
@@ -73,17 +72,27 @@ function App() {
     const planesCopy = planes.slice();
     if ("from_town" === by) {
       planesCopy.sort(
-        (a, b) => a.from_town - b.from_town
+        (a, b) => {
+          if (a.from_town > b.from_town) {
+            return 1;
+          }
+          if (a.from_town < b.from_town) {
+            return -1;
+          }
+          return 0;
+        }
       );
+      
     }
     setPlanes(planesCopy);
   };
 
   const sortDate = (by) => {
+    console.log("veikia sort")
     const planesCopy = planes.slice();
     if ("arrival_time" === by) {
       planesCopy.sort(
-        (a, b) => a.arrival_time - b.arrival_time
+        (a, b) => new Date(a.arrival_time) - new Date(b.arrival_time)
       );
     }
     setPlanes(planesCopy);
@@ -93,7 +102,7 @@ function App() {
 
   return (
     <>
-      <Top sort={sort} sortDate={sortDate} totalPlane={totalPlane} totalPlane={totalPlane}></Top>
+      <Top sort={sort} sortDate={sortDate} totalPlane={totalPlane}></Top>
       <NewPlane addPlane={addPlane}></NewPlane>
       <Planes planes={planes} deletePlane={deletePlane} showModal={showModal}></Planes>
       <Modal id={modalId} plane={getplane(modalId)} hideModal={hideModal} editPlane={editPlane}></Modal>
