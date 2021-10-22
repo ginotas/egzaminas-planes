@@ -1,6 +1,6 @@
 import Plane from "./Plane";
 
-export function Planes({ planes, deletePlane, showModal, editPlane }) {
+export function Planes({ planes, deletePlane, showModal }) {
   return (
     <div className="lentele">
       <table className="table">
@@ -16,10 +16,10 @@ export function Planes({ planes, deletePlane, showModal, editPlane }) {
               what airline?
             </th>
             <th scope="col" className="table-info">
-             arrival date?
+              arrival date?
             </th>
             <th scope="col" className="table-info">
-              is late? 
+              is late?
             </th>
             <th scope="col" className="table-info">
               Edit
@@ -30,11 +30,14 @@ export function Planes({ planes, deletePlane, showModal, editPlane }) {
           </tr>
         </thead>
         {planes.map((plane) => (
-          <Plane key={plane.id} plane={plane} deletePlane={deletePlane} editPlane={editPlane} showModal= {showModal} />
+          <Plane
+            key={plane.id}
+            plane={plane}
+            deletePlane={deletePlane}
+            showModal={showModal}
+          />
         ))}
       </table>
     </div>
   );
 }
-
-

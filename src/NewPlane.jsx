@@ -39,7 +39,7 @@ export function NewPlane({ addPlane }) {
   return (
     <div className="form-container">
       <form className="forma">
-          <label>From what city:</label>
+        <label>From what city:</label>
         <input
           type="text"
           placeholder="enter city"

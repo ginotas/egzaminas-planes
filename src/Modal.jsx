@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 
-export function Modal({ plane, id, hideModal, editplane }) {
-
+export function Modal({ plane, id, hideModal, editPlane }) {
   const [from_town, setFrom_town] = useState("");
   const [airline, setAirline] = useState("");
   const [arrival_time, setArrival_time] = useState("");
@@ -11,7 +10,6 @@ export function Modal({ plane, id, hideModal, editplane }) {
     setFrom_town(plane.from_town);
     setAirline(plane.airline);
     setArrival_time(plane.arrival_time);
-    
   }, [plane]);
 
   const control = (e, what) => {
@@ -32,8 +30,7 @@ export function Modal({ plane, id, hideModal, editplane }) {
   };
 
   const edit = () => {
-      
-    editplane(id, {
+    editPlane(id, {
       from_town: from_town,
       airline: airline,
       arrival_time: arrival_time,
@@ -47,13 +44,13 @@ export function Modal({ plane, id, hideModal, editplane }) {
   };
 
   if (id === 0) {
-      return null;
+    return null;
   }
 
   return (
     <div className="modalas">
       <form className="forma">
-      <label>From what city:</label>
+        <label>From what city:</label>
         <input
           type="text"
           placeholder="enter city"
@@ -73,7 +70,7 @@ export function Modal({ plane, id, hideModal, editplane }) {
           value={arrival_time}
           onChange={(e) => control(e, "arrival_time")}
         />
-         <label> ar veluoja? </label>
+        <label> ar veluoja? </label>
         <input
           type="number"
           value={is_late}
