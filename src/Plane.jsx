@@ -1,4 +1,5 @@
 function Plane({ plane, deletePlane, showModal }) {
+    
   const dateFormat = (date) => {
     date = date.split("-");
     let day = [];

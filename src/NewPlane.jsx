@@ -60,9 +60,10 @@ export function NewPlane({ addPlane }) {
           value={arrival_time}
           onChange={(e) => control(e, "arrival_time")}
         />
-        <label> ar veluoja? </label>
+        <label> ar veluoja (not done) </label>
         <input
           type="number"
+          placeholder="enter one number"
           value={is_late}
           onChange={(e) => control(e, "is_late")}
         />

@@ -1,4 +1,4 @@
-export function Top({ sort, sortDate, totalPlane }) {
+export function Top({ sort, sortDate, totalPlane, airlinesCount }) {
   return (
     <div className="container">
       <div className="row">

@@ -7,25 +7,25 @@ export function Planes({ planes, deletePlane, showModal }) {
         <thead className="thead-dark">
           <tr>
             <th scope="col" className="table-info">
-              ID
+              plane ID:
             </th>
             <th scope="col" className="table-info">
-              plane from which town
+              from where:
             </th>
             <th scope="col" className="table-info">
-              what airline?
+              airline:
             </th>
             <th scope="col" className="table-info">
-              arrival date?
+              arrival date:
             </th>
             <th scope="col" className="table-info">
-              is late?
+              is late (nepadaryta)
             </th>
             <th scope="col" className="table-info">
-              Edit
+              Edit plane info:
             </th>
             <th scope="col" className="table-info">
-              Delete
+              Delete plane:
             </th>
           </tr>
         </thead>

@@ -6,6 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   
+  
 }
 
 code {
@@ -51,12 +52,15 @@ button {
   border: 5px solid bisque;
   padding: 10px;
   margin: 10px;
+  border-radius: 20px;
 }
 
 .form-container {
   margin: 20px;
   padding: 30px;
   border: 2px solid black;
+  border-radius: 20px;
+  
 }
 
 .headeris {
