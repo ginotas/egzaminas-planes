@@ -5,6 +5,7 @@ import { Planes } from "./Planes";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { Modal } from "./Modal";
+import { Header } from "./Header";
 
 function App() {
   const [planes, setPlanes] = useState([]);
@@ -97,8 +98,9 @@ function App() {
 
   return (
     <>
-      <Top sort={sort} sortDate={sortDate} totalPlane={totalPlane}></Top>
+      <Header></Header>
       <NewPlane addPlane={addPlane}></NewPlane>
+      <Top sort={sort} sortDate={sortDate} totalPlane={totalPlane}></Top>
       <Planes
         planes={planes}
         deletePlane={deletePlane}

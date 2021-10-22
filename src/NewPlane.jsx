@@ -38,6 +38,7 @@ export function NewPlane({ addPlane }) {
 
   return (
     <div className="form-container">
+        <h5>Enter new plane data here:</h5>
       <form className="forma">
         <label>From what city:</label>
         <input
